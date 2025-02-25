@@ -1,0 +1,101 @@
+
+/* Main Container */
+.mentor-container {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styles */
+h2, h3 {
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Form and Mentors Section */
+.form-container, .mentors-container {
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+    margin-top: 25px;
+    text-align: left;
+}
+
+/* ✅ Fix: Assign Mentor Box */
+.mentors-container {
+    margin-top: 35px;  /* More spacing between sections */
+    padding: 35px;  /* More padding inside */
+    text-align: center;
+    border: 2px solid #ddd;  /* Light border for visibility */
+}
+
+/* Input Fields & Select Box */
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Fix: Ensure input text is visible */
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ✅ Fixed: Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff !important; /* Force blue background */
+    color: white !important; /* Ensure text is always visible */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+button:hover {
+    background: #0056b3 !important; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* ✅ Fix: Assign Mentor Section Styling */
+.mentors-container select {
+    margin-bottom: 20px;  /* More spacing below select box */
+}
+
+.mentors-container button {
+    margin-top: 15px;  /* More spacing above the button */
+}
+
+
+@media (max-width: 768px) {
+    .mentor-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .form-container, .mentors-container {
+        padding: 25px;
+    }
+}

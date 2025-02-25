@@ -1,0 +1,149 @@
+.mentor-dashboard {
+    background: #f0f4f8;
+    min-height: 88.3vh;
+    width: 94.7vw;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .subheading {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  /* BOX WRAPPER */
+  .mentor-box {
+    background: rgba(255, 255, 255, 0.8); /* Slight transparency or solid #fff */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Similar to login box */
+    text-align: center;
+  }
+  
+  /* Availability Toggle Section */
+  .availability {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .status-label {
+    font-weight: bold;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #4caf50;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+  
+  .status-text {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* No Requests */
+  .no-requests {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Request Cards */
+  .request-card {
+    background: #fff;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .accept-btn,
+  .reject-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .accept-btn {
+    background: #5cb85c;
+  }
+  
+  .accept-btn:hover {
+    background: #4cae4c;
+  }
+  
+  .reject-btn {
+    background: #d9534f;
+  }
+  
+  .reject-btn:hover {
+    background: #c9302c;
+  }
+  
+  .unavailable-msg {
+    color: #d9534f;
+    font-style: italic;
+  }
+  
