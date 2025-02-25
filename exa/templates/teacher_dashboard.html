@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <h2>Teacher Dashboard</h2>
+    
+    <form action="{% url 'teacher_dashboard' %}" method="POST">
+        {% csrf_token %}
+        <label>Course:</label>
+        <input type="text" name="course_name" required><br>
+
+        <label>Exam Date:</label>
+        <input type="date" name="exam_date" required><br>
+
+        <label>Portions:</label>
+        <textarea name="portions" required></textarea><br>
+
+        <button type="submit">Announce Exam</button>
+    </form>
+
+    <h3>Announced Exams:</h3>
+    <ul>
+        {% for exam in exams %}
+            <li>{{ exam.course_name }} - {{ exam.exam_date }} - {{ exam.portions }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

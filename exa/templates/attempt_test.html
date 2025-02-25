@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attempt Test</title>
+</head>
+<body>
+    <h2>MCQ Test</h2>
+
+    <form action="{% url 'evaluate_test' exam.id %}" method="POST">
+        {% csrf_token %}
+        {% for question in questions %}
+            <p><b>{{ question.text }}</b></p>
+            {% for option in question.options %}
+                <input type="radio" name="q{{ forloop.parentloop.counter }}" value="{{ option }}">
+                {{ option }}<br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attempt Test</title>
+</head>
+<body>
+    <h2>Attempt Test</h2>
+
+    <form action="{% url 'submit_test' exam_id %}" method="POST">
+        {% csrf_token %}
+        {% for question in questions %}
+            <p><strong>{{ forloop.counter }}. {{ question.question }}</strong></p>
+            {% for option in question.options %}
+                <input type="radio" name="answer_{{ forloop.parentloop.counter }}" value="{{ option }}" required> {{ option }}<br>
+            {% endfor %}
+        {% endfor %}
+
+        <button type="submit">Submit Answers</button>
+    </form>
+</body>
+</html>

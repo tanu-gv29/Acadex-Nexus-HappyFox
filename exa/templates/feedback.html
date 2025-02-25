@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Feedback</title>
+</head>
+<body>
+    <h2>Performance Summary</h2>
+
+    <p><b>Strengths:</b> {{ strengths }}</p>
+    <p><b>Weaknesses:</b> {{ weaknesses }}</p>
+
+    <h3>Suggested YouTube Videos:</h3>
+    <ul>
+        {% for video in suggested_videos %}
+            <li><a href="{{ video.url }}" target="_blank">{{ video.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'student_dashboard' %}">
+        <button>Back to Dashboard</button>
+    </a>
+</body>
+</html>

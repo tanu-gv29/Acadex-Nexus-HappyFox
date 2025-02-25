@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h2>Student Dashboard</h2>
+
+    <h3>Upcoming Exams:</h3>
+    <ul>
+        {% for exam in exams %}
+            <li>
+                {{ exam.course_name }} - {{ exam.exam_date }} - {{ exam.portions }}
+                <a href="{% url 'generate_test' exam.id %}">
+                    <button>Attempt Test</button>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
